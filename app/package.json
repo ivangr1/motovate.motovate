@@ -1,0 +1,11 @@
+{
+  "name": "motovate.motovate",
+  "version": "2.5.2-build1624630011085-build1652276678785-build1652292832888-build1652340630106",
+  "description": "Providers extension",
+  "dependencies": {
+    "react-native-sms": "~1.11.0"
+  },
+  "nativeDependencies": [
+    "react-native-sms"
+  ]
+}

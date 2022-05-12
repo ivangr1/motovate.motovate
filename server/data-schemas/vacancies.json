@@ -1,0 +1,74 @@
+{
+  "title": "vacancies",
+  "properties": {
+    "name": {
+      "format": "single-line",
+      "title": "Name",
+      "required": true,
+      "type": "string",
+      "displayPriority": 1
+    },
+    "image": {
+      "format": "attachment",
+      "title": "Image",
+      "type": "object",
+      "referencedSchema": "shoutem.core.image-attachments",
+      "displayPriority": 2
+    },
+      "description": {
+      "format": "html",
+      "title": "Description",
+      "type": "string",
+      "displayPriority": 3
+    },
+    "url": {
+      "format": "uri",
+      "title": "Application Form link",
+      "type": "string",
+      "pattern": "^(https?|bundle|shoutem|tel|sms|mail|itms)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]*[-A-Za-z0-9+&@#/%=~_|]$",
+      "displayPriority": 4
+    },
+    "mail": {
+      "format": "single-line",
+      "title": "Application e-mail",
+      "type": "string",
+      "displayPriority": 5
+    },
+    "startDate": {
+      "type": "object",
+      "format": "date-time",
+      "required": true,
+      "title": "Valid from",
+      "displayPriority": 6
+    },
+    "endDate": {
+      "type": "object",
+      "format": "date-time",
+      "required": true,
+      "title": "Valid until",
+      "displayPriority": 7
+    },
+    "location": {
+      "format": "geolocation",
+      "title": "Location",
+      "type": "object",
+      "displayPriority": 8
+    },
+    "provider": {
+      "type": "object",
+      "format": "entity-reference",
+      "title": "Provider",
+      "referencedSchema": "motovate.motovate.providers",
+      "displayPriority": 9
+    },
+    "specialty": {
+      "format": "entity-reference",
+      "title": "Specialty",
+      "type": "object",
+      "referencedSchema": "motovate.auth.specialties",
+      "displayPriority": 10
+    }
+  },
+  "titleProperty": "name",
+  "type": "object"
+}

@@ -1,0 +1,50 @@
+{
+  "title": "providers",
+  "properties": {
+    "name": {
+      "format": "single-line",
+      "title": "Name",
+      "type": "string",
+      "displayPriority": 1
+    },
+    "gallery": {
+      "format": "array",
+      "title": "Gallery",
+      "type": "array",
+      "displayPriority": 2
+    },
+      "description": {
+      "format": "html",
+      "title": "Description",
+      "type": "string",
+      "displayPriority": 3
+    },
+    "url": {
+      "format": "uri",
+      "title": "Website",
+      "type": "string",
+      "pattern": "^(https?|bundle|shoutem|tel|sms|mail|itms)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]*[-A-Za-z0-9+&@#/%=~_|]$",
+      "displayPriority": 4
+    },
+    "mail": {
+      "format": "single-line",
+      "title": "E-mail",
+      "type": "string",
+      "displayPriority": 5
+    },
+    "phone": {
+      "format": "single-line",
+      "title": "Phone",
+      "type": "string",
+      "displayPriority": 6
+    },
+    "location": {
+      "format": "geolocation",
+      "title": "Location",
+      "type": "object",
+      "displayPriority": 7
+    }
+  },
+  "titleProperty": "name",
+  "type": "object"
+}

@@ -1,0 +1,115 @@
+{
+  "name": "motovate",
+  "title": "Motovate main extension",
+  "version": "2.5.6",
+  "description": "Manage the Motovate design and functionality",
+  "platform": "2.5.*",
+  "dataSchemas": [
+    {
+      "name": "providers",
+      "path": "server/data-schemas/providers.json"
+    },
+    {
+      "name": "vacancies",
+      "path": "server/data-schemas/vacancies.json"
+    }
+  ],
+  "screens": [
+    {
+      "name": "ProvidersList"
+    },
+    {
+      "name": "VacanciesList"
+    },
+    {
+      "name": "VacanciesFilteredList"
+    },
+    {
+      "name": "VacancyDetails"
+    },
+    {
+      "name": "ProviderDetails"
+    },
+    {
+      "name": "EventDetails"
+    },
+    {
+      "name": "SubNavigationList",
+      "title": "Motovate List",
+      "extends": "shoutem.sub-navigation.IconGrid",
+      "settingsPage": {
+        "page": "shoutem.navigation.List"
+      },
+      "settings": {
+        "backgroundImage": "",
+        "parallaxEffect": "onScroll",
+        "inItemAlignment": "left",
+        "listAlignment": "bottom",
+        "topOffset": 0,
+        "showText": true,
+        "showIcon": true,
+        "itemHeight": 24
+      }
+    },
+    {
+      "name": "NewsList",
+      "extends": "shoutem.news.ArticlesScreen",
+      "title": "Motovate news layout"
+    },
+    {
+      "name": "ArticleDetailsScreen"
+    },
+    {
+      "name": "EventsList",
+      "title": "Motovate events layout",
+      "extends": "shoutem.events.EventsScreen"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "ProvidersList",
+      "title": "Providers list",
+      "description": "List of providers",
+      "screen": "@.ProvidersList",
+      "adminPages": [
+        {
+          "page": "shoutem.cms.CmsPage",
+          "title": "Content",
+          "parameters": {
+            "schema": "@.providers"
+          }
+        },
+        {
+          "page": "@.SMS",
+          "title": "SMS"
+        }
+      ],
+      "settings": {
+        "showSmsButton": false,
+        "smsButtonLabel": "",
+        "smsBody": ""
+      }
+    },
+    {
+      "name": "VacanciesList",
+      "title": "Vacancies list",
+      "description": "List of vacancies",
+      "screen": "@.VacanciesList",
+      "adminPages": [
+        {
+          "page": "shoutem.cms.CmsPage",
+          "title": "Content",
+          "parameters": {
+            "schema": "@.vacancies"
+          }
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "SMS",
+      "type": "react-page"
+    }
+  ]
+}
